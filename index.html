@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <div id="corpo">
+        <input id="resultado" type="text" placeholder="0" disabled="disabled">
+    
+        <div class="botao_linha1">
+            <button onclick="operacao('acao', 'C')" class="botao_largo" type="button">C</button>
+            <button onclick="operacao('acao', '/')" class="botao_normal" type="button">/</button>
+            <button onclick="operacao('acao', '*')" class="botao_normal" type="button">X</button>
+        </div>
+
+        <div class="botao_linha1">
+            <button onclick="operacao('valor', '7')" class="botao_normal" type="button">7</button>
+            <button onclick="operacao('valor', '8')" class="botao_normal" type="button">8</button>
+            <button onclick="operacao('valor', '9')" class="botao_normal" type="button">9</button>
+            <button onclick="operacao('acao', '-')" class="botao_normal" type="button">-</button>
+        </div>
+
+        <div class="botao_linha1">
+            <button onclick="operacao('valor', '4')" class="botao_normal" type="button">4</button>
+            <button onclick="operacao('valor', '5')" class="botao_normal" type="button">5</button>
+            <button onclick="operacao('valor', '6')" class="botao_normal" type="button">6</button>
+            <button onclick="operacao('acao', '+')" class="botao_normal" type="button">+</button>
+        </div>
+
+        <div>
+            <div class="botao_linha2">
+                <button onclick="operacao('valor', '3')" class="botao_normal" type="button">3</button>
+                <button onclick="operacao('valor', '2')" class="botao_normal" type="button">2</button>
+                <button onclick="operacao('valor', '1')" class="botao_normal" type="button">1</button>
+            </div>
+            <div class="botao_linha2">
+                <button onclick="operacao('valor', '0')" class="botao_largo" type="button">0</button>
+                <button onclick="operacao('acao', '.')" class="botao_normal" type="button">.</button>
+            </div>
+            <div class="botao_vertical">
+                <button id="botao_igual" onclick="operacao('acao', '=')">=</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        function operacao(tipo,valor){
+
+            if (tipo === 'acao'){
+
+                if (valor === 'C'){
+                    document.getElementById('resultado').value = ''
+                }
+
+                if (valor === '+' | valor === '-' | valor === '*' | valor === '/' | valor === '.'){
+                    document.getElementById('resultado').value += valor
+                }
+
+                if (valor === '='){
+                    var valor_campo = eval(document.getElementById('resultado').value)
+
+                    document.getElementById('resultado').value = valor_campo
+                }
+            }
+
+            else if (tipo === 'valor'){
+                document.getElementById('resultado').value += valor 
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

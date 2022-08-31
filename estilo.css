@@ -1,0 +1,96 @@
+/* GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(229, 228, 228);
+    min-width: 600px;
+    min-height: 350px;
+}
+
+/* DESIGN CALCULADORA */
+
+/* CORPO */
+
+#corpo {
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 51vh;
+    height: 70vh;
+    margin: 10vh auto;
+}
+
+/* TELA */
+
+#resultado {
+    width: 100%;
+    height: 18vh;
+    border-bottom: 1px solid orange;
+    text-align: end;
+    font-size: 7vh;
+    background: none;
+    color: orange;
+    margin-bottom: 0px;
+}
+
+#resultado::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+/* LINHA DE BOTÕES */
+
+.botao_linha1 {
+    margin: 0 auto;
+    width: 100%;
+    height: 10.6vh;
+    border-radius: 10px;
+}
+
+.botao_linha2 {
+    width: 76%;
+    height: 10.6vh;
+    border-radius: 10px;
+    float: left;
+}
+
+.botao_vertical {
+    height: 21vh;
+    border-radius: 10px;
+    float: right;
+    margin-top: -10.7vh;
+    margin-right: 0.2vh;
+}
+
+/* BOTÕES */
+
+.botao_largo {
+    width: 24.5vh;
+    height: 9vh;
+    font-size: 4vh;
+    background: none;
+    color: white;
+    border: none;
+}
+
+.botao_normal {
+    width: 11.75vh;
+    height: 9vh;
+    font-size: 4vh;
+    background: none;
+    color: white;
+    border: none;
+}
+
+#botao_igual {
+    width: 11.9vh;
+    height: 19.5vh;
+    font-size: 4vh;
+    background: orange;
+    color: #000;
+    border: none;
+}
